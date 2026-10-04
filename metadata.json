@@ -1,0 +1,6 @@
+{
+  "name": "الخوارزميات - بحث تفاعلي مدرسي",
+  "description": "بحث تفاعلي شامل حول أنواع الخوارزميات لمدرسة الوصال العامرة بإشراف الأستاذ حمزة، من إعداد هاشم بليبلو وسالم أبوغنيمة ومحمد الخمائسي.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

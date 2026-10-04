@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #020817;
+    --bg-surface: #061126;
+    --bg-elevated: #081A34;
+    --glow-primary: #00D9FF;
+    --glow-secondary: #3B82F6;
+    --accent: #14F195;
+    --highlight: #A855F7;
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: #CBD5E1;
+    font-family: 'Cairo', 'Tajawal', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+}
+
+/* Linear / Raycast Style Backdrop Glows */
+.glass-panel {
+  background: rgba(6, 17, 38, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 217, 255, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-elevated {
+  background: rgba(8, 26, 52, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 217, 255, 0.22);
+  box-shadow: 0 12px 40px -10px rgba(0, 217, 255, 0.15), 0 20px 48px -15px rgba(0, 0, 0, 0.6);
+}
+
+.glow-border-cyan {
+  border-color: rgba(0, 217, 255, 0.4);
+  box-shadow: 0 0 20px -3px rgba(0, 217, 255, 0.25);
+}
+
+.glow-border-accent {
+  border-color: rgba(20, 241, 149, 0.4);
+  box-shadow: 0 0 20px -3px rgba(20, 241, 149, 0.25);
+}
+
+.cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 217, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 217, 255, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.cyber-grid-dense {
+  background-image: 
+    linear-gradient(to right, rgba(0, 217, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 217, 255, 0.06) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+@keyframes pulse-photon {
+  0% {
+    stroke-dashoffset: 40;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-pulse-photon {
+  stroke-dasharray: 8 8;
+  animation: pulse-photon 1.5s linear infinite;
+}
+
+@keyframes subtle-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-float {
+  animation: subtle-float 4s ease-in-out infinite;
+}
+
+/* Custom modern scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020817;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00D9FF;
+}
